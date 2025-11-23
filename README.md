@@ -1,1 +1,38 @@
 # Apex-Internship-Task-1
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Basics</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to Web Development </h1>
+
+    <p>
+    This webpage is part of my web development practice.
+    With the help of HTML, CSS, and JavaScript, I am learning how real websites
+    are structured, styled, and made interactive.
+    Every section of this page—content, styling, animations, and actions—has been
+    created step-by-step to improve my coding skills and understand how modern
+    web pages actually work in the real world.
+</p>
+        <!--  TECH IMAGE WITH COMPUTER + CODE ON SCREEN -->
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=60"
+             alt="Computer on desk with code on screen">
+
+        <a href="https://www.google.com" target="_blank"> Click here to visit Google </a>
+
+        <button onclick="displayMessage()">Click Me!</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
