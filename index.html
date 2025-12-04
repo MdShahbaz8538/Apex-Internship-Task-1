@@ -3,33 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Development Basics</title>
-
+    <title>Travel-X Agency</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="container">
-        <h1>Welcome to Web Development </h1>
+    <nav class="navbar">
+        <div class="logo">Travel-X</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Hill stations</a></li>
+            <li><a href="#">Best Offers</a></li> <li><a href="#">Our Sites</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
 
-    <p>
-    This webpage is part of my web development practice.
-    With the help of HTML, CSS, and JavaScript, I am learning how real websites
-    are structured, styled, and made interactive.
-    Every section of this page—content, styling, animations, and actions—has been
-    created step-by-step to improve my coding skills and understand how modern
-    web pages actually work in the real world.
-</p>
-        <!--  TECH IMAGE WITH COMPUTER + CODE ON SCREEN -->
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=60"
-             alt="Computer on desk with code on screen">
+        <a href="#" class="btn-register">Register</a>
+    </nav>
 
-        <a href="https://www.google.com" target="_blank"> Click here to visit Google </a>
-
-        <button onclick="displayMessage()">Click Me!</button>
-    </div>
+    <section class="hero-section">
+        <div class="content">
+            <h3 class="fade-in-up delay-1">Enjoy</h3>
+            <h1 class="fade-in-up delay-2">International Travel<br>Agency</h1>
+            <button class="btn-book fade-in-up delay-3" onclick="triggerAlert()">Book your Trip</button>
+        </div>
+    </section>
 
     <script src="script.js"></script>
-
 </body>
 </html>
