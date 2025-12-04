@@ -1,107 +1,136 @@
-/* Objective 2: Colors, Fonts, Spacing, Layout */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f9;
+/* Background and Overlay */
+.hero-section {
+    width: 100%;
+    height: 100vh;
+    /* Using a similar scenic beach image */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=1974&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    margin: 0;
-}
-
-.container {
-    background-color: white;
-    width: 400px;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     text-align: center;
 }
 
-h1 {
-    color: #2c3e50;
+/* Navigation Bar Styling */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #e55e5e; /* Hover effect */
+}
+
+/* Register Button (Top Right) */
+.btn-register {
+    text-decoration: none;
+    background-color: #d65a5a; /* The pinkish-red color from the image */
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.btn-register:hover {
+    background-color: #c04040;
+    transform: scale(1.05);
+}
+
+/* Main Hero Content Styling */
+.content h3 {
+    color: #e0e0e0;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
     margin-bottom: 10px;
 }
 
-p {
-    color: #555;
-    line-height: 1.6;
-}
-
-img {
-    max-width: 100%;
-    border-radius: 5px;
-    margin: 15px 0;
-}
-
-a {
-    color: #3498db;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 20px;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-button {
-    background-color: #27ae60;
+.content h1 {
     color: white;
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* "Book your Trip" Button Styling */
+.btn-book {
+    background-color: #d65a5a;
+    color: white;
+    padding: 15px 35px;
     border: none;
-    padding: 10px 20px;
     font-size: 16px;
-    border-radius: 5px;
+    letter-spacing: 1px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
-button:hover {
-    background-color: #219150;
-}
-/* Container styling */
-.container {
-    text-align: center;
-    margin-top: 40px;
+.btn-book:hover {
+    background-color: #c04040;
+    transform: scale(1.1); /* Animation on hover */
+    box-shadow: 0px 5px 15px rgba(214, 90, 90, 0.4);
 }
 
-/* Image Styling: Glow + Zoom Animation */
-.container img {
-    width: 450px;
-    border-radius: 15px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    box-shadow: 0 0 20px rgba(0, 200, 255, 0.3);
+/* --- ANIMATIONS --- */
+
+/* Keyframes for sliding up and fading in */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Hover Effect */
-.container img:hover {
-    transform: scale(1.08);           /* Zoom */
-    box-shadow: 0 0 35px rgba(0, 255, 255, 0.9), /* Outer glow */
-                0 0 15px rgba(0, 255, 255, 0.7) inset;  /* Inner screen glow */
-}
-/* Typing + Fade-in Animation */
-.animated-text {
-    width: 80%;
-    margin: 20px auto;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 3px solid #00eaff; /* cursor */
-    animation: typing 5s steps(60) 1s forwards, blink 0.7s step-end infinite;
+/* Class to apply animation */
+.fade-in-up {
+    opacity: 0; /* Hidden initially */
+    animation: fadeInUp 1s ease-out forwards;
 }
 
-/* Typing Effect */
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-/* Cursor Blink */
-@keyframes blink {
-    from { border-color: transparent; }
-    to { border-color: #00eaff; }
-}
+/* Delays to create a staggered effect */
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.5s; }
+.delay-3 { animation-delay: 0.8s; }
