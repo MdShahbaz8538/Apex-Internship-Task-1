@@ -1,5 +1,7 @@
-// Objective 3: Implement simple interaction
-
-function displayMessage() {
-    alert("Success! I have successfully linked the external JavaScript file.");
+function triggerAlert() {
+    // This creates the browser popup
+    alert("Welcome to Travel-X! Your booking process is starting now.");
+    
+    // Optional: You can log this to the console as well
+    console.log("Booking button clicked");
 }
